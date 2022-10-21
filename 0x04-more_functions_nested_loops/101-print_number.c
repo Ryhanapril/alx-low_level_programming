@@ -1,35 +1,24 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
- * print_number - prints an integer.
- * @n: input integer.
- * Return: no return.
- */
-
-void print_number(int n)
+  * main - Prints the sum of all multiples of 3 or 5 up to 1024
+  *
+  * Return: Always (Success)
+  */
+int main(void)
 {
-	unsigned int m, d, count;
+	int i, z = 0;
 
-	if (n < 0)
+	while (i < 1024)
 	{
-		_putchar(45);
-		m = n * -1;
-	}
-	else
-	{
-		m = n;
+		if ((i % 3 == 0) || (i % 5 == 0))
+		{
+			z += i;
+		}
+
+		i++;
 	}
 
-	d = m;
-	count = 1;
-
-	while (d > 9)
-	{
-		d /= 10;
-		count *= 10;
-	}
-	for (; count >= 1; count /= 10)
-	{
-		_putchar(((m / count) % 10) + 48);
-	}
+	printf("%d\n", z);
+	return (0);
 }
