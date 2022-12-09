@@ -1,2 +1,1 @@
-# alx-low_level_programming
-Betty task
+C-File I/O
